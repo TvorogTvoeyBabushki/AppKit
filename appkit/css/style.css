@@ -58,6 +58,8 @@ p {
     align-items: center;
 
     cursor: pointer;
+
+    color: #fff;
 }
 
 .header__icon {
@@ -213,7 +215,7 @@ p {
 .appkit__inner {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 60px;
+    margin-bottom: 90px;
 }
 
 .appkit__item {
@@ -242,4 +244,105 @@ p {
     font-size: 14px;
     color: #616670;
     font-weight: 400;
+}
+
+    /* REVIEW */
+
+.review {
+    background: #40babd url(../img/review/map.png) center no-repeat;
+    background-size: cover;
+}
+
+.review__title {
+    margin-bottom: 60px;
+
+    font-size: 36px;
+    color: #fff;
+    font-weight: 300;
+
+    text-align: center;
+}
+    
+.review__inner {
+    max-width: 635px;
+    margin: 0 auto 60px;
+
+    position: relative;
+}
+
+.review__inner:last-child {
+    padding-bottom: 120px;
+    margin-bottom: 0;
+}
+
+.review__item {
+    margin-left: 100px;
+    padding: 30px;
+    min-height: 80px;
+
+    border-radius: 4px;
+
+    background: rgba(0, 0, 0, 0.2);
+    
+}
+
+.review__item.profile {
+    margin-left: 0;
+    margin-right: 100px;
+}
+
+.review__item::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid rgba(0, 0, 0, 0.2);
+
+    position: absolute;
+    top: 30px;
+    left: 90px;
+}
+
+.review__item.profile::before {
+    left: auto;
+    right: 90px;
+
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid rgba(0, 0, 0, 0.2);
+    border-right: 0;
+}
+
+.review__img {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.review__img.profile {
+    left:auto;
+    right: 0;
+}
+
+.review__text {
+    margin-bottom: 15px;
+
+    font-size: 14px;
+    color: #fff;
+    font-weight: 300;
+
+    line-height: 1.5;
+}
+
+.review__personal {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+
+    font-weight: 300;
 }
