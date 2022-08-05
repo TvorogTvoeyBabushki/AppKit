@@ -56,6 +56,18 @@ p {
     z-index: 1000;
 }
 
+.header.fixed {
+    height: auto;
+
+    position: fixed;
+
+    background-color: #494d55;
+}
+
+.header.fixed .header__inner {
+    padding: 0 15px 15px;
+}
+
 .header__inner {
     display: flex;
     justify-content: space-between;
@@ -114,6 +126,54 @@ p {
     opacity: 1;
 }
 
+/* BURGER */
+
+.burger {
+    display: none;
+    padding: 9px 1px;
+
+    cursor: pointer;
+    background: none;
+    border: 0;
+}
+
+.burger__item {
+    display: block;
+    width: 30px;
+    height: 3px;
+
+    background-color: #fff;
+
+    font-size: 0;
+    color: transparent;
+
+    position: relative;
+}
+
+.burger__item::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+    position: absolute;
+    top: -8px;
+    left: 0;
+    z-index: 1;
+}
+
+.burger__item::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+
+    position: absolute;
+    top: 8px;
+    left: 0;
+    z-index: 1;
+}
+
 /* INTRO */
 
 .intro {
@@ -122,6 +182,13 @@ p {
     background: url(../img/intro/hero-1.jpg) center no-repeat;
     background-size: cover;
     height: 560px;
+}
+.intro.two {
+    background: url(../img/intro/hero-2.jpg) center no-repeat;
+}
+
+.intro.three {
+    background: url(../img/intro/hero-3.jpg) center no-repeat;
 }
 
 .intro__inner {
@@ -183,6 +250,57 @@ p {
     bottom: 0;
     right: 0;
     z-index: 1;
+}
+
+/* SLICK */
+
+.slick-track {
+    height: 560px;
+
+}
+
+.slick-dots {
+    display: flex;
+    
+
+    margin: 0 0 10px;
+
+    list-style: none;
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+}
+
+.slick-dots li {
+    margin: 0 5px 0 0;
+}
+
+.slick-dots li:last-child {
+    margin: 0;
+}
+
+.slick-dots button {
+    width: 15px;
+    height: 15px;
+    padding: 0;
+
+    background-color: #fff;
+    border-radius: 50%;
+    border: 0;
+
+    cursor: pointer;
+
+    font-size: 0;
+    color: transparent;
+    opacity: 0.5;
+}
+
+.slick-dots .slick-active button {
+    background-color: #40babd;
+    opacity: 1;
 }
 
 /* ABOUT */
@@ -908,6 +1026,30 @@ p {
 
     .nav {
         display: none;
+        flex-direction: column;
+        width: 100%;
+
+        background-color: #494d55;
+        text-align: right;
+
+        position: absolute;
+        top: 100%;
+        right: 0;
+    }
+
+    .nav.show {
+        display: flex;
+    }
+
+    .nav__link {
+        margin: 0;
+        padding: 5px 30px 5px 0;
+    }
+
+    /* BURGER */
+
+    .burger {
+        display: block;
     }
 
     /* CONTAINER */

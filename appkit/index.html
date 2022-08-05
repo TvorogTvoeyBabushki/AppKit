@@ -6,10 +6,13 @@
 
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300&display=swap"
+        rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>APPKIT</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/9482a37923.js" crossorigin="anonymous"></script>
 </head>
 
@@ -18,23 +21,27 @@
 
     <!-- HEADER -->
 
-    <header class="header">
+    <header class="header" id="header">
         <div class="container">
             <div class="header__inner">
 
-                <div class="header__logo">
+                <div class="header__logo" id="header__logo">
                     <i class="header__icon fa-solid fa-cube"></i>
                     <div class="header__title"><span class="header__span">APP</span>KIT</div>
                 </div>
 
-                <nav class="nav">
-                    <a class="nav__link" href="#">About</a>
-                    <a class="nav__link" href="#">Testimonials</a>
-                    <a class="nav__link" href="#">Features</a>
-                    <a class="nav__link" href="#">Team</a>
-                    <a class="nav__link" href="#">Pricing</a>
-                    <a class="nav__link" href="#">Contact</a>
+                <nav class="nav" id="nav">
+                    <a class="nav__link" href="#" data-scroll="#about">About</a>
+                    <a class="nav__link" href="#" data-scroll="#testimonials">Testimonials</a>
+                    <a class="nav__link" href="#" data-scroll="#features">Features</a>
+                    <a class="nav__link" href="#" data-scroll="#team">Team</a>
+                    <a class="nav__link" href="#" data-scroll="#pricing">Pricing</a>
+                    <a class="nav__link" href="#" data-scroll="#contact">Contact</a>
                 </nav>
+
+                <button class="burger" type="button" id="navToggle">
+                    <span class="burger__item">Menu</span>
+                </button>
 
             </div>
         </div>
@@ -42,35 +49,86 @@
 
     <!-- INTRO -->
 
-    <div class="intro">
-        <div class="container">
+    <div class="intro__slider" id="introSlider">
 
-            <div class="intro__inner">
+        <div class="intro " id="intro">
+            <div class="container">
 
-                <div class="intro__item">
+                <div class="intro__inner">
 
-                    <h1 class="intro__title">AppKit is the perfect front-end
-                        template for app developers</h1>
+                    <div class="intro__item">
 
-                    <h2 class="intro__suptitle">It helps developers to build beautiful and user-friendly web apps
-                        quickly and easily!</h2>
+                        <h1 class="intro__title">AppKit is the perfect front-end
+                            template for app developers</h1>
 
-                    <button class="intro__btn" type="button">Get Started</button>
+                        <h2 class="intro__suptitle">It helps developers to build beautiful and user-friendly web apps quickly and easily!</h2>
 
-                </div>
+                        <button class="intro__btn" type="button">Get Started</button>
 
-                <div class="intro__img">
-                    <img class="intro__imgs" src="img/intro/imac.png" alt="">
+                    </div>
+
+                    <div class="intro__img">
+                        <img class="intro__imgs" src="img/intro/imac.png" alt="">
+                    </div>
+
                 </div>
 
             </div>
-
         </div>
+
+        <div class="intro two" id="intro">
+            <div class="container">
+
+                <div class="intro__inner">
+
+                    <div class="intro__item">
+
+                        <h1 class="intro__title">Angular Lover?</h1>
+
+                        <h2 class="intro__suptitle">AppKit also comes with an Angular JS version. It empowers developers to create UI components with very little code. Feeding data into AppKit directives is quick and easy.</h2>
+
+                        <button class="intro__btn" type="button">Find out more</button>
+
+                    </div>
+
+                    <div class="intro__img">
+                        <img class="intro__imgs" src="img/intro/imac.png" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="intro three" id="intro">
+            <div class="container">
+
+                <div class="intro__inner">
+
+                    <div class="intro__item">
+
+                        <h1 class="intro__title">Ready to build outstanding apps?</h1>
+
+                        <h2 class="intro__suptitle">Get AppKit today and it will supercharge your development. It's a must-have for any developers who are serious about building great products!</h2>
+
+                        <button class="intro__btn" type="button">Try is now</button>
+
+                    </div>
+
+                    <div class="intro__img">
+                        <img class="intro__imgs" src="img/intro/imac.png" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
     </div>
 
     <!-- ABOUT -->
 
-    <div class="about">
+    <div class="about" id="about">
         <div class="container section">
             <div class="about__inner">
 
@@ -141,7 +199,7 @@
 
     <!-- REVIEW -->
 
-    <div class="review">
+    <div class="review" id="testimonials">
         <div class="container section">
 
             <h3 class="review__title">Many Happy Customers</h3>
@@ -212,7 +270,7 @@
 
     <!-- ABOUT -->
 
-    <div class="about">
+    <div class="about" id="features">
         <div class="container section">
             <div class="about__inner">
 
@@ -241,7 +299,8 @@
                 <div class="features__item icon">
 
                     <a class="features__icon" href="#" target="_blank">
-                        <i class="fa-solid fa-wand-magic-sparkles"><span class="features__text">20+ Use Case-based App Pages</span></i>
+                        <i class="fa-solid fa-wand-magic-sparkles"><span class="features__text">20+ Use Case-based App
+                                Pages</span></i>
                     </a>
 
                     <a class="features__icon" href="#" target="_blank">
@@ -249,7 +308,8 @@
                     </a>
 
                     <a class="features__icon" href="#" target="_blank">
-                        <i class="fa-solid fa-chart-column"><span class="features__text">Useful Chart Libraries</span></i>
+                        <i class="fa-solid fa-chart-column"><span class="features__text">Useful Chart
+                                Libraries</span></i>
                     </a>
 
                     <a class="features__icon" href="#" target="_blank">
@@ -269,7 +329,8 @@
                     </a>
 
                     <a class="features__icon" href="#" target="_blank">
-                        <i class="fa-solid fa-heart"><span class="features__text">Free Updates & Support + Documentation</span></i>
+                        <i class="fa-solid fa-heart"><span class="features__text">Free Updates & Support +
+                                Documentation</span></i>
                     </a>
 
                 </div>
@@ -280,7 +341,7 @@
 
     <!-- ABOUT -->
 
-    <div class="about team">
+    <div class="about team" id="team">
         <div class="container section--grey">
             <div class="about__inner">
 
@@ -398,7 +459,7 @@
 
     <!-- ABOUT -->
 
-    <div class="about">
+    <div class="about" id="pricing">
         <div class="container section">
             <div class="about__inner">
 
@@ -473,14 +534,16 @@
 
     <!-- FOOTER -->
 
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <div class="container">
 
             <div class="footer__inner">
 
                 <h2 class="footer__title">Contact Us</h2>
 
-                <p class="footer__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis.</p>
+                <p class="footer__text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula
+                    eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus. Donec quam felis.</p>
 
                 <button class="footer__btn" type="button">Get in Touch</button>
 
@@ -492,13 +555,19 @@
             <div class="container">
 
                 <div class="copyrigh__text">
-                    <p class="copyrigh__p">Designed with <i class="copyright__icon fa-solid fa-heart"></i> by <span class="copyrigh__span">Xiaoying Riley</span> for developers</p>
+                    <p class="copyrigh__p">Designed with <i class="copyright__icon fa-solid fa-heart"></i> by <span
+                            class="copyrigh__span">Xiaoying Riley</span> for developers</p>
                 </div>
 
             </div>
         </div>
 
     </footer>
+
+    <!-- JAVASCRIPT -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="app.js"></script>
 
 </body>
 
